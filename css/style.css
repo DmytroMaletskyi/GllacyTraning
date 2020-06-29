@@ -605,34 +605,31 @@ a.current span {
 }
 
 .slider-dots button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin-right: 8px;
-}
-
-.slider-dots .dot {
   width: 21px;
   height: 21px;
 
   box-sizing: border-box;
+  background-color: transparent;
   border: 2px solid var(--font-white, #FFFFFF);
   border-radius: 50%;
+
+  padding: 0;
+  margin-right: 8px;
 }
 
-.slider-dots .dot.current {
-  background-color: var(--font-white, #FFFFFF);
+.slider-dots .current {
+  background-color: var(--font-white, #FFFFFF);;
 }
 
-.slider-dots .dot:not(.current):hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.slider-dots .dot:hover {
+.slider-dots button:hover {
   cursor: pointer;
 }
 
-.slider-dots .dot:hover:active {
+.slider-dots button:not(.current):hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slider-dots button:hover:active {
   background-color: var(--font-white, #FFFFFF);
 }
 
@@ -1289,6 +1286,138 @@ a:active .icon-background {
   color: #FFBC9E;
 }
 
+/* Popups */
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);;
+}
+
+.overlay-show {
+  display: block;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  background-color: #F8F7F4;
+  border-radius: 6px;
+}
+
+.popup-show {
+  display: block;
+}
+
+.cross-button {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  width: 18px;
+  height: 17px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.popup-contact-us {
+  top: calc(50% - 220px);
+  left: calc(50% - 238px);
+  width: 477px;
+  height: 441px;
+
+  box-sizing: border-box;
+
+  padding-top: 14px;
+  padding-right: 25px;
+  padding-bottom: 27px;
+  padding-left: 25px;
+}
+
+.popup-contact-us p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.popup-contact-us p:nth-child(3) {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #323232;
+}
+
+.popup-username input,
+.popup-email input {
+  width: 267px;
+  height: 44px;
+  box-sizing: border-box;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 4px;
+
+  padding-top: 2px;
+  padding-right: 13px;
+  padding-left: 13px;
+}
+
+.popup-contact-us textarea {
+  width: 428px;
+  height: 154px;
+  box-sizing: border-box;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: #999999;
+
+  padding-top: 11px;
+  padding-right: 13px;
+  padding-bottom: 12px;
+  padding-left: 13px;
+}
+
+.popup-contact-us .popup-letter {
+  margin-bottom: 19px;
+}
+
+.popup-contact-us-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popup-contact-us-footer .orange-button {
+  font-size: 18px;
+  line-height: 24px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+
+  border: none;
+  border-radius: 70px;
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  padding-top: 11px;
+  padding-right: 24px;
+  padding-bottom: 11px;
+  padding-left: 24px;
+}
+
+.popup-contact-us-footer .orange-button:focus,
+.popup-contact-us-footer .orange-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+   linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px #AC1000;
+  outline: none;
+}
+
+.popup-contact-us-footer .orange-button:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+   linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: inset 0px 2px 2px #942718;
+}
+
 /* Other */
 
 .visually-hidden {
@@ -1307,17 +1436,3 @@ a:active .icon-background {
 
   background: linear-gradient(180deg, var(--button-gradient-start, #F26843) 0%, var(--button-gradient-end, #E74A35) 100%);
 }
-
-/* .orange-button:focus,
-.orange-button:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-   linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  box-shadow: 0px 2px 2px #AC1000;
-  outline: none;
-}
-
-.orange-button:active {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
-   linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  box-shadow: inset 0px 2px 2px #942718;
-} */

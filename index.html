@@ -128,7 +128,7 @@
           <li class="promo-slide">
             <article>
               <h3>Шоколадный пломбир <br>и лимонный сорбет</h3>
-              <img src="img/promo-2.png" width="716" height="716"
+              <img src="img/promo-2.png" width="1200" height="1200"
                 alt="Изображение двух рожков мороженного со вкусом шоколадный пломбир и лимонный сорберт">
               <a class="orange-button" href="blank.html">Давайте оба!</a>
             </article>
@@ -136,7 +136,7 @@
           <li class="promo-slide">
             <article>
               <h3>Пломбир с помадкой <br>и клубничный сорбет</h3>
-              <img src="img/promo-3.png" width="716" height="716"
+              <img src="img/promo-3.png" width="1200" height="1200"
                 alt="Изображение двух рожков мороженного со вкусом пломбир с помадкой и клубличный сорбет">
               <a class="orange-button" href="blank.html">Давайте оба!</a>
             </article>
@@ -144,19 +144,13 @@
         </ul>
         <ul class="slider-dots">
           <li>
-            <button type="button" aria-label="Первый слайд">
-              <div class="dot current"></div>
-            </button>
+            <button class="current first-dot" type="button" aria-label="Первый слайд"></button>
           </li>
           <li>
-            <button type="button" aria-label="Второй слайд">
-              <div class="dot"></div>
-            </button>
+            <button class="second-dot" type="button" aria-label="Второй слайд"></button>
           </li>
           <li>
-            <button type="button" aria-label="Третий слайд">
-              <div class="dot"></div>
-            </button>
+            <button class="third-dot" type="button" aria-label="Третий слайд"></button>
           </li>
         </ul>
       </div>
@@ -416,6 +410,35 @@
       </p>
     </section>
   </footer>
+
+  <div class="overlay">
+    <section class="popup popup-contact-us">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <button class="cross-button">
+        <img src="img/X-big.svg" width="18" height="17" alt="X" aria-label="Кнопка закрытия">
+      </button>
+      <p>Мы обязательно вам ответим!</p>
+      <form action="https://echo.htmlacademy.ru/" method="POST">
+        <p class="popup-username">
+          <label class="visually-hidden" for="username">Имя и фамилия</label>
+          <input type="text" id="username" name="username" placeholder="Имя Фамилия" required>
+        </p>
+        <p class="popup-email">
+          <label class="visually-hidden" for="email">Ваш Email</label>
+          <input type="email" id="email" name="email" placeholder="email@example.com" required>
+        </p>
+        <p class="popup-letter">
+          <label class="visually-hidden" for="letter">Текст письма</label>
+          <textarea id="letter" name="letter" placeholder="В свободной форме" required></textarea>
+        </p>
+        <div class="popup-contact-us-footer">
+          <button class="orange-button" type="submit">Отправить</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script src="js/index.js"></script>
 
 </body>
 
