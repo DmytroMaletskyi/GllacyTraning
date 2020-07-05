@@ -90,25 +90,25 @@ img {
 
 .main-header {
   display: flex;
+  flex-direction: column;
 
   padding-top: 9px;
+  margin-bottom: -7px;
 }
 
 .main-header .logo {
-  margin-right: 10px;
-}
-
-.header-menu {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
+  margin-right: 11px;
 }
 
 .top-menu {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 15px;
+  margin-bottom: -3px;
+}
+
+.left-menu {
+  display: flex;
 }
 
 .main-navigation {
@@ -651,17 +651,64 @@ a.current span {
   box-shadow: inset 0px 2px 2px #942718;
 }
 
-.bottom-menu {
+.home-bottom-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inner-bottom-menu {
   display: flex;
   justify-content: space-between;
 }
 
-.bottom-menu p {
+.breadcrumbs {
+  list-style: none;
+  display: flex;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 25px;
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+}
+
+.breadcrumbs a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:active {
+  color: #FFBC9E;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);;
+}
+
+.breadcrumbs li:not(:last-of-type)
+{
+  position: relative;
+  margin-right: 23px;
+}
+
+.breadcrumbs li:not(:last-of-type)::after {
+  position: absolute;
+  top: 5px;
+  right: -15px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-image: url("../img/arrows.svg");
+}
+
+.contact-information p {
   padding: 0;
   margin: 0;
 }
 
-.bottom-menu span {
+.contact-information span {
   display: inline-block;
   font-size: 14px;
   font-weight: 700;
@@ -672,16 +719,45 @@ a.current span {
   margin-bottom: 8px;
 }
 
-.bottom-menu a {
+.contact-information a {
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
   color: var(--font-white, #FFFFFF);
 }
 
-.bottom-menu a:hover,
-.bottom-menu a:active {
+.contact-information a:hover,
+.contact-information a:active {
   color: #FFBC9E;
+}
+
+/* Catalog */
+
+.page-heading {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+  color: white;
+
+  margin-bottom: 29px;
+}
+
+.catalog-section ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-section li {
+  margin-bottom: 29px;
+}
+
+.catalog-section article {
+  padding-top: 209px;
 }
 
 /* Promo */
@@ -765,7 +841,7 @@ a.current span {
 
 .slider-dots {
   position: absolute;
-  bottom: 19px;
+  bottom: 21px;
   left: 102px;
   display: flex;
 
