@@ -82,6 +82,10 @@ img {
   background-color: var(--background-3, #9D8B84);
 }
 
+.background-highlight {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 /* Header */
 
 .main-header {
@@ -337,7 +341,8 @@ a.current span {
 }
 
 .login a,
-.cart a {
+.cart.empty a,
+.cart:not(.empty) a {
   display: block;
 
   font-size: 14px;
@@ -353,23 +358,37 @@ a.current span {
   padding-left: 45px;
 }
 
+.cart:not(.empty) a {
+  color: black;
+  background-color: white;
+}
+
 .login .login-container {
   display: none;
 }
 
 .login:hover a,
-.cart:hover a {
+.cart.empty:hover a {
   color: var(--font-black, #000000);
   background-color: var(--font-white, #FFFFFF);
 }
 
+.cart:not(.empty) path:not(.cart-fill) {
+  fill: var(--font-black, #343434);
+}
+
+.cart:not(.empty) .cart-fill {
+  fill: #E84D37;
+}
+
 .login:hover path,
-.cart:hover path {
+.cart.empty:hover path:not(.cart-fill) {
   fill: var(--font-black, #000000);
 }
 
 .login a:first-child:active,
-.cart:active a {
+.cart.empty:active a,
+.cart:not(.empty):active a {
   color: var(--font-black, #000000);
   background-color: var(--navigation-active, #EDEDED);
   box-shadow: inset 0px 2px 1px var(--navigation-active-shadow, #696969);
@@ -481,9 +500,160 @@ a.current span {
   border-bottom: 1px solid var(--links-action-light-underlining, rgba(232, 77, 55, 0.3));
 }
 
+.cart-container {
+  position: absolute;
+  display: none;
+  top: 30px;
+  left: -421px;
+  z-index: 1;
+
+  padding-top: 6px;
+}
+
+.cart:not(.empty):hover .cart-container {
+  display: block;
+}
+
+.cart-dropdown {
+  width: 539px;
+  box-sizing: border-box;
+
+  font-size: 13px;
+  line-height: 16px;
+
+  background-color: #F8F7F4;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+
+  padding-top: 20px;
+  padding-right: 14px;
+  padding-bottom: 21px;
+  padding-left: 21px;
+}
+
+.cart-content {
+  list-style: none;
+  position: relative;
+
+  padding: 0;
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+.cart-content::after {
+  position: absolute;
+  left: -6px;
+  bottom: 0;
+  content: "";
+  width: 510px;
+  height: 1px;
+  background-color: #CACAC7;
+}
+
+.cart-content li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.cart-content li:last-of-type {
+  margin-bottom: 0;
+}
+
+.cart-content .small-cross {
+  width: 11px;
+  height: 11px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  padding: 0;
+  margin-top: 10px;
+  margin-right: 9px;
+}
+
+.cart-content .item-image {
+  width: 33px;
+  height: 33px;
+  margin-right: 13px;
+}
+
+.cart-content .item-name-price {
+  display: flex;
+  padding-top: 9px;
+}
+
+.cart-content p {
+  margin: 0;
+}
+
+.cart-content .item-name {
+  width: 216px;
+  margin-right: 31px;
+}
+
+.cart-content .weight {
+  color: black;
+  margin-right: 26px;
+}
+
+.weight span {
+  color: #ABABAB;;
+}
+
+.cart-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 16px;
+}
+
+.cart-bottom p {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #323232;
+
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.cart-bottom span:not(.total-price) {
+  margin-right: 6px;
+}
+
+.cart-bottom .orange-button {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+
+  border: none;
+  border-radius: 26px;
+  box-shadow: 0px 1px 2px rgba(172, 16, 0, 0.25);
+
+  padding-top: 14px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+}
+
+.cart-bottom .orange-button:focus,
+.cart-bottom .orange-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+   linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px #AC1000;
+  outline: none;
+}
+
+.cart-bottom .orange-button:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+   linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: inset 0px 2px 2px #942718;
+}
+
 .bottom-menu {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .bottom-menu p {
