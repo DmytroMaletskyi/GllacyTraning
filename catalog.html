@@ -161,8 +161,8 @@
       <section class="filter-section container">
         <h2 class="visually-hidden">Фильтр</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="POST">
-          <p>
-            <label for="sorting">Сортировка</label>
+          <p class="sorting">
+            <label for="sorting">Сортировка:</label>
             <select name="sorting-order" id="sorting">
               <option value="popularity">по популярности</option>
               <option value="cheap-first">сначала недорогие</option>
@@ -172,8 +172,17 @@
           </p>
           <fieldset class="price-selector">
             <legend>
-              Цена: <span class="lower-price"></span> &#8381; &mdash; <span class="higher-price"></span> &#8381;
+              Цена: <span class="lower-price">100</span> &#8381; &ndash; <span class="higher-price">500</span> &#8381;
             </legend>
+            <div class="range-selector">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 57%; margin-left: 21px; "></div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: calc(14% - 10px);"></div>
+                  <div class="toggle toggle-max" tabindex="0" style="left: calc(69% - 10px);"></div>
+                </div>
+              </div>
+            </div>
           </fieldset>
           <fieldset class="fat-selector">
             <legend>Жирность:</legend>
@@ -183,7 +192,7 @@
                 <label for="0%">0%</label>
               </li>
               <li>
-                <input type="radio" id="to-10%" name="fat" value="to-10%">
+                <input type="radio" id="to-10%" name="fat" value="to-10%" checked>
                 <label for="to-10%">до 10%</label>
               </li>
               <li>
