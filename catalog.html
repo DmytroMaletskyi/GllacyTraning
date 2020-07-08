@@ -12,7 +12,6 @@
 <body class="page-body background-one">
   <div class="highlight-container background-highlight">
     <header class="main-header container">
-      <!-- <section class="header-menu"> -->
       <h2 class="visually-hidden">Главное меню</h2>
       <div class="top-menu">
         <div class="left-menu">
@@ -151,7 +150,6 @@
           </p>
         </div>
       </div>
-      <!-- </section> -->
     </header>
 
     <main>
@@ -169,6 +167,9 @@
               <option value="expensive-first">сначала дорогие</option>
               <option value="fat">по жирности</option>
             </select>
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0H11" fill="#ECF1EE" />
+            </svg>
           </p>
           <fieldset class="price-selector">
             <legend>
@@ -206,27 +207,27 @@
             </ul>
           </fieldset>
           <fieldset class="filler-selector">
-            <legend>Наполнитель</legend>
+            <legend>Наполнители:</legend>
             <ul>
               <li>
                 <input type="checkbox" id="chocolate" name="chocolate" checked>
-                <label for="chocholate">шоколадные</label>
+                <label for="chocolate">шоколадные</label>
               </li>
               <li>
                 <input type="checkbox" id="sugar-sprinkling" name="sugar-sprinkling" checked>
-                <label for="">сахарные присыпки</label>
+                <label for="sugar-sprinkling">сахарные присыпки</label>
               </li>
               <li>
                 <input type="checkbox" id="fruits" name="fruits">
-                <label for="">фрукты</label>
+                <label for="fruits">фрукты</label>
               </li>
               <li>
                 <input type="checkbox" id="syrup" name="syrup">
-                <label for="">сиропы</label>
+                <label for="syrup">сиропы</label>
               </li>
               <li>
                 <input type="checkbox" id="jam" name="jam">
-                <label for="">джемы</label>
+                <label for="jam">джемы</label>
               </li>
             </ul>
           </fieldset>
@@ -235,7 +236,7 @@
       </section>
       <section class="catalog-section container">
         <h2 class="visually-hidden">Каталог мороженного</h2>
-        <ul>
+        <ul class="catalog-list">
           <li class="popular-item">
             <div class="card-container">
               <article>
@@ -286,12 +287,10 @@
           <li class="popular-item">
             <div class="card-container">
               <article>
-                <h3 class="taste-name"><span>Сливочное с брусничным
-                    джемом
-                  </span>
+                <h3 class="taste-name"><span>Сливочное с брусничным</span><br><span>джемом</span>
                 </h3>
-                <img src="img/hit 1.png" width="267" height="267"
-                  alt="Изображение сливочного мороженного с апельсиновым джемом и цитрусовой стружкой">
+                <img src="img/Creamy-with-jam.png" width="267" height="267"
+                  alt="Изображение сливочного мороженного с брусничным джемом">
                 <p class="price">325 &#8381;<span>/кг</span></p>
               </article>
               <a class="orange-button" href="blank.html">Быстрый просмотр</a>
@@ -301,7 +300,7 @@
             <div class="card-container">
               <article>
                 <h3 class="taste-name"><span>Сливочно-черничное с цельными ягодами черники </span></h3>
-                <img src="img/hit 2.png" width="267" height="267"
+                <img src="img/Creamy-with-berries.png" width="267" height="267"
                   alt="Изображение сливочно-кофейного мороженного с кусочками шоколада">
                 <p class="price">410 &#8381;<span>/кг</span></p>
               </article>
@@ -313,7 +312,7 @@
               <article>
                 <h3 class="taste-name"><span>Сливочно-лимонное с карамельной присыпкой</span>
                 </h3>
-                <img src="img/hit 3.png" width="267" height="267"
+                <img src="img/Creamy-lemon.png" width="267" height="267"
                   alt="Изображение сливочно-клубничного мороженного с присыпкой из белого шоколада">
                 <p class="price">315 &#8381;<span>/кг</span></p>
               </article>
@@ -324,7 +323,7 @@
             <div class="card-container">
               <article>
                 <h3 class="taste-name"><span>Сливочное с шоколадной стружкой</span></h3>
-                <img src="img/hit 4.png" width="267" height="267"
+                <img src="img/Creamy-with-chocolate.png" width="267" height="267"
                   alt="Изображение сливочного крем-брюле с карамельной подливкой">
                 <p class="price">320 &#8381;<span>/кг</span></p>
               </article>
@@ -334,10 +333,10 @@
           <li class="popular-item">
             <div class="card-container">
               <article>
-                <h3 class="taste-name"><span>Сливочно-ванильное с кусочками шоколада</span></h3>
-                <img src="img/hit 1.png" width="267" height="267"
-                  alt="Изображение сливочного мороженного с апельсиновым джемом и цитрусовой стружкой">
-                <p class="price">420 &#8381;<span>/кг</span></p>
+                <h3 class="taste-name"><span>Сливочно-ванильное</span><br><span> с кусочками шоколада</span></h3>
+                <img src="img/Creamy-with-chocolate-pieces.png" width="267" height="267"
+                  alt="Изображение сливочного-ванильного мороженного с кусочками шоколада">
+                <p class="price">440 &#8381;<span>/кг</span></p>
               </article>
               <a class="orange-button" href="blank.html">Быстрый просмотр</a>
             </div>
@@ -345,9 +344,9 @@
           <li class="popular-item">
             <div class="card-container">
               <article>
-                <h3 class="taste-name"><span>Сливочноe с ментоловым сиропом</span></h3>
-                <img src="img/hit 2.png" width="267" height="267"
-                  alt="Изображение сливочно-кофейного мороженного с кусочками шоколада">
+                <h3 class="taste-name"><span>Сливочноe с ментоловым</span><br><span>сиропом</span></h3>
+                <img src="img/Creamy-with-menthol.png" width="267" height="267"
+                  alt="Изображение сливочного мороженного с ментоловым сиропом">
                 <p class="price">435 &#8381;<span>/кг</span></p>
               </article>
               <a class="orange-button" href="blank.html">Быстрый просмотр</a>
@@ -358,7 +357,7 @@
               <article>
                 <h3 class="taste-name"><span>Сливочное с кусочками черного шоколада</span>
                 </h3>
-                <img src="img/hit 3.png" width="267" height="267"
+                <img src="img/Creamy-with-dark-chocolate.png" width="267" height="267"
                   alt="Изображение сливочно-клубничного мороженного с присыпкой из белого шоколада">
                 <p class="price">355 &#8381;<span>/кг</span></p>
               </article>
@@ -369,12 +368,29 @@
             <div class="card-container">
               <article>
                 <h3 class="taste-name"><span>Сливочное с мятным сиропом</span></h3>
-                <img src="img/hit 4.png" width="267" height="267"
+                <img src="img/Creamy-with-mint.png" width="267" height="267"
                   alt="Изображение сливочного крем-брюле с карамельной подливкой">
                 <p class="price">420 &#8381;<span>/кг</span></p>
               </article>
               <a class="orange-button" href="blank.html">Быстрый просмотр</a>
             </div>
+          </li>
+        </ul>
+        <ul class="paging">
+          <li class="prev-button">
+            <a class="disabled-link" href="blank.html" aria-label="На предидущую страницу">
+              <img src="img/icon-right-small.svg" width="7px" height="12px" alt="&lt;">
+            </a>
+          </li>
+          <li><a class="selected" href="blank.html" aria-label="На первую страницу">1</a></li>
+          <li><a href="blank.html" aria-label="На вторую страницу">2</a></li>
+          <li><a href="blank.html" aria-label="На третью страницу">3</a></li>
+          <li><a href="blank.html" aria-label="На четвертую страницу">4</a></li>
+          <li><a href="blank.html" aria-label="На пятую страницу">5</a></li>
+          <li class="next-button">
+            <a href="blank.html" aria-label="На следующую страницу">
+              <img src="img/icon-right-small.svg" width="7px" height="12px" alt="&gt;">
+            </a>
           </li>
         </ul>
       </section>
